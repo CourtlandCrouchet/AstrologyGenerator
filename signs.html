@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-        <style>
-            .container {
-                background-color:aliceblue;
-                border: 3px solid blue;
-                width: 90vw;
-                height: 85vh;
-            }
-        </style>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <style>
+        .container {
+            background-color: aliceblue;
+            border: 3px solid blue;
+            width: 90vw;
+            height: 85vh;
+        }
+        .card-title {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="horoscopes.html">Horoscopes</a>
+                    <a class="nav-link" href="horoscopes.html">Horoscopes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="signs.html">Signs</a>
@@ -33,35 +39,152 @@
                     <a class="nav-link" href="matches.html">Matches</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
+                    <a class="nav-link disabled" href="#">Disabled</a>
                 </li>
-              </ul>
-              <form class="form-inline my-2 my-lg-0">
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-              </form>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <h2 id="title" class="title">Signs</h2>
+        <div class="row">
+            <div class="col-4">
+                <div id="aries" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Aries</h4>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
             </div>
-          </nav>
-          <div class="container">
-            <h2 id="title" class="title">Signs</h2>
-          </div>
-    </body>
-    <script>
-        function init()
-        {
+            <div class="col-4">
+                <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div id="taurus" class="card-body">
+                        <h4 class="card-title">Taurus</h4>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div id="gemini" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Gemini</h5>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div id="cancer" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Cancer</h4>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div id="leo" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Leo</h5>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div id="virgo" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Virgo</h4>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div id="libra" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Libra</h4>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div id="scorpio" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Scorpio</h5>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div id="sagittarius" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Sagittarius</h5>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div id="capricorn" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Capricorn</h5>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div id="aquarius" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Aquarius</h5>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <div id="pisces" class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                    <div class="card-body">
+                        <h4 class="card-title">Pisces</h4>
+                        <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
+                            of the panel's content.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function init() {
 
-        }
-        init();
-    </script>
+    }
+    init();
+</script>
+
 </html>
