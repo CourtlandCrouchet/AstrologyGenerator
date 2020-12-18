@@ -5,3 +5,15 @@
 * <asp> = sign aspect
 * <adj> = adjective
 */
+function matchSentence()
+{
+
+}
+function signSentence()
+{
+
+}
+function horoscopeSentence()
+{
+    
+}

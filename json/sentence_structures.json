@@ -5,7 +5,8 @@
     ],
     "signs":
     [
-        "<cause>, <effect>."
+        "<cause>, <effect>.",
+        "<cause_sent>. <effect_sent>."
     ],
     "matches":
     [
