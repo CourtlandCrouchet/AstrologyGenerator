@@ -13,5 +13,20 @@
         "Libra",
         "Scorpio",
         "Sagittarius"
+    ],
+    "signpl":
+    [
+        "Capricorns",
+        "Aquariuses",
+        "Pisces",
+        "Aries",
+        "Tauruses",
+        "Geminis",
+        "Cancers",
+        "Leos",
+        "Virgos",
+        "Libras",
+        "Scorpios",
+        "Sagittariuses"
     ]
 }
