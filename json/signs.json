@@ -1,32 +1,65 @@
 {
     "signs":
     [
-        "Capricorn",
-        "Aquarius",
-        "Pisces",
-        "Aries",
-        "Taurus",
-        "Gemini",
-        "Cancer",
-        "Leo",
-        "Virgo",
-        "Libra",
-        "Scorpio",
-        "Sagittarius"
-    ],
-    "signpl":
-    [
-        "Capricorns",
-        "Aquariuses",
-        "Pisces",
-        "Aries",
-        "Tauruses",
-        "Geminis",
-        "Cancers",
-        "Leos",
-        "Virgos",
-        "Libras",
-        "Scorpios",
-        "Sagittariuses"
+        {
+            "name": "Aries",
+            "plural": "Aries",
+            "color": "red"
+        },
+        {
+            "name": "Taurus",
+            "plural": "Tauruses",
+            "color": "green"
+        },
+        {
+            "name": "Gemini",
+            "plural": "Gemini",
+            "color": "yellow"
+        },
+        {
+            "name": "Cancer",
+            "plural": "Cancers",
+            "color": "white"
+        },
+        {
+            "name": "Leo",
+            "plural": "Leos",
+            "color": "gold"
+        },
+        {
+            "name": "Virgo",
+            "plural": "Virgos",
+            "color": "brown"
+        },
+        {
+            "name": "Libra",
+            "plural": "Libras",
+            "color": "pink"
+        },
+        {
+            "name": "Scorpio",
+            "plural": "Scorpios",
+            "color": "black"
+        },
+        {
+            "name": "Sagittarius",
+            "plural": "Sagittariuses",
+            "color": "purple"
+        },
+        {
+            "name": "Capricorn",
+            "plural": "Capricorns",
+            "color": "gray"
+        },
+        {
+            "name": "Aquarius",
+            "plural": "Aquarius",
+            "color": "blue"
+        },
+        {
+            "name": "Pisces",
+            "plural": "Pisces",
+            "color": "light-green"
+        }
     ]
 }
