@@ -9,6 +9,88 @@
                 width: 90vw;
                 height: 85vh;
             }
+            .card-title {
+            text-align: center;
+            margin-bottom: -15px;
+            }
+            #Aries {
+                /* background-color: #f12928; */
+                background: linear-gradient(rgba(241,41,40,.8), rgba(241,41,40,1));
+            }
+            #Taurus {
+                background-color: #2ab34b;
+                background: linear-gradient(rgba(42,179,75,.8), rgba(42,179,75,1));
+            }
+            #Gemini {
+                /* background-color: #fbd421; */
+                background: linear-gradient(rgba(251,212,33,.8), rgba(251,212,33,1));
+                color: black !important;
+            }
+            #Cancer {
+                /* background-color: #f7f7f7; */
+                background: linear-gradient(rgba(247,247,247,.8), rgba(247,247,247,1));
+                color: black !important;
+            }
+            #Leo {
+                /* background-color: #ddc269; */
+                background: linear-gradient(rgba(221,194,105,.8), rgba(221,194,105,1));
+                color: black !important;
+            }
+            #Virgo {
+                /* background-color: #848259; */
+                background: linear-gradient(rgba(132,130,89,.8), rgba(132,130,89,1));
+            }
+            #Libra {
+                /* background-color: #d9bfec; */
+                background: linear-gradient(rgba(217,191,236,.8), rgba(217,191,236,1));
+                color: black !important;
+            }
+            #Scorpio {
+                /* background-color: #121212; */
+                background: linear-gradient(rgba(18,18,18,.8), rgba(18,18,18,1));
+            }
+            #Sagittarius {
+                /* background-color: #974f8e; */
+                background: linear-gradient(rgba(151,79,142,.8), rgba(151,79,142,1));
+            }
+            #Capricorn {
+                background-color: #7d746d;
+                background: linear-gradient(rgba(125,116,109,.8), rgba(125,116,109,1));
+            }
+            #Aquarius {
+                background-color: #405af5;
+                background: linear-gradient(rgba(64,90,245,.8), rgba(64,90,245,1));
+            }
+            #Pisces {
+                background-color: #b0cd73;
+                background: linear-gradient(rgba(176,205,115,.8), rgba(176,205,115,1));
+                color: black !important;
+            }
+            .sign-symbol {
+                width: 70%;
+                height: 70%;
+                margin-left: 15%;
+            }
+            .Leo-symbol {
+                margin-top: 10%;
+                margin-bottom: -10%;
+            }
+            .Sagittarius-symbol {
+                width: 60%;
+                height: 60%;
+                margin-left: 20%;
+                margin-top: 10%;
+            }
+            .Aquarius-symbol {
+                width: 80%;
+                height: 80%;
+                margin-left: 10%;
+                margin-top: -5%;
+            }
+            .card {
+                max-height: 200px;
+                overflow: hidden;
+            }
         </style>
     </head>
     <body>
@@ -60,8 +142,7 @@
                     <div id="Aries" class="card text-white mb-3" style="max-width: 20rem;">
                         <div class="card-body">
                             <h4 class="card-title">Aries</h4>
-                            <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="sign-symbol card-text" src="images/AriesSym.png"/>
                         </div>
                     </div>
                 </div>
@@ -69,8 +150,7 @@
                     <div class="card text-white mb-3" style="max-width: 20rem;">
                         <div id="Taurus" class="card-body">
                             <h4 class="card-title">Taurus</h4>
-                            <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="sign-symbol card-text" src="images/TaurusSym.png"/>
                         </div>
                     </div>
                 </div>
@@ -78,8 +158,7 @@
                     <div id="Gemini" class="card mb-3" style="max-width: 20rem;">
                         <div class="card-body">
                             <h5 class="card-title">Gemini</h5>
-                            <p class="card-text">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="sign-symbol card-text" src="images/GeminiSym.png"/>
                         </div>
                     </div>
                 </div>
@@ -87,8 +166,7 @@
                     <div id="Cancer" class="card mb-3" style="max-width: 20rem;">
                         <div class="card-body">
                             <h4 class="card-title">Cancer</h4>
-                            <p class="card-text">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="sign-symbol card-text" src="images/CancerSym.png"/>
                         </div>
                     </div>
                 </div>
@@ -98,8 +176,7 @@
                     <div id="Leo" class="card mb-3" style="max-width: 20rem;">
                         <div class="card-body">
                             <h5 class="card-title">Leo</h5>
-                            <p class="card-text">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="Leo-symbol sign-symbol card-text" src="images/LeoSym.png"/>
                         </div>
                     </div>
                 </div>
@@ -107,17 +184,15 @@
                     <div id="Virgo" class="card text-white mb-3" style="max-width: 20rem;">
                         <div class="card-body">
                             <h4 class="card-title">Virgo</h4>
-                            <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="sign-symbol card-text" src="images/VirgoSym.png"/>
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
-                    <div id="Libra" class="card text-white mb-3" style="max-width: 20rem;">
+                    <div id="Libra" class="card mb-3" style="max-width: 20rem;">
                         <div class="card-body">
                             <h4 class="card-title">Libra</h4>
-                            <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="sign-symbol card-text" src="images/LibraSym.png"/>
                         </div>
                     </div>
                 </div>
@@ -125,8 +200,7 @@
                     <div id="Scorpio" class="card text-white mb-3" style="max-width: 20rem;">
                         <div class="card-body">
                             <h5 class="card-title">Scorpio</h5>
-                            <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="sign-symbol card-text" src="images/ScorpioSym.png"/>
                         </div>
                     </div>
                 </div>
@@ -136,8 +210,7 @@
                     <div id="Sagittarius" class="card text-white mb-3" style="max-width: 20rem;">
                         <div class="card-body">
                             <h5 class="card-title">Sagittarius</h5>
-                            <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="Sagittarius-symbol sign-symbol card-text" src="images/SagittariusSym.png"/>
                         </div>
                     </div>
                 </div>
@@ -145,8 +218,7 @@
                     <div id="Capricorn" class="card text-white mb-3" style="max-width: 20rem;">
                         <div class="card-body">
                             <h5 class="card-title">Capricorn</h5>
-                            <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="sign-symbol card-text" src="images/CapricornSym.png"/>
                         </div>
                     </div>
                 </div>
@@ -154,8 +226,7 @@
                     <div id="Aquarius" class="card text-white mb-3" style="max-width: 20rem;">
                         <div class="card-body">
                             <h5 class="card-title">Aquarius</h5>
-                            <p class="card-text text-white">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="Aquarius-symbol sign-symbol card-text" src="images/AquariusSym.png"/>
                         </div>
                     </div>
                 </div>
@@ -163,8 +234,7 @@
                     <div id="Pisces" class="card mb-3" style="max-width: 20rem;">
                         <div class="card-body">
                             <h4 class="card-title">Pisces</h4>
-                            <p class="card-text">Some quick example text to build on the panel title and make up the bulk
-                                of the panel's content.</p>
+                            <img class="sign-symbol card-text" src="images/PiscesSym.png"/>
                         </div>
                     </div>
                 </div>
