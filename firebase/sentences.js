@@ -26,7 +26,7 @@ function httpGet(path, callback)
 
 function loadSentenceData()
 {
-    httpGet("json/sentence_fragments.json", function(response){
+    httpGet("sentence_fragments.json", function(response){
         try {
             fragments = JSON.parse(response);
         }
@@ -36,7 +36,7 @@ function loadSentenceData()
         }
     });
 
-    httpGet("json/sentence_structures.json", function(response){
+    httpGet("sentence_structures.json", function(response){
         try {
             structures = JSON.parse(response);
         }
@@ -46,7 +46,7 @@ function loadSentenceData()
         }
     });
 
-    httpGet("json/sign_adjectives.json", function(response){
+    httpGet("sign_adjectives.json", function(response){
         try {
             adjectives = JSON.parse(response);
         }
@@ -56,7 +56,7 @@ function loadSentenceData()
         }
     });
     
-    httpGet("json/sign_aspects.json", function(response){
+    httpGet("sign_aspects.json", function(response){
         try {
             response = JSON.parse(response);
             aspects = response["aspect"];
@@ -68,7 +68,7 @@ function loadSentenceData()
         }
     });
 
-    httpGet("json/signs.json", function(response){
+    httpGet("signs.json", function(response){
         try {
             signs = JSON.parse(response)["signs"];
         }
