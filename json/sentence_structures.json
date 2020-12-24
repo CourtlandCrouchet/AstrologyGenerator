@@ -5,8 +5,12 @@
     ],
     "signs":
     [
-        "<cause>, <effect>.",
-        "<cause_sent>. <effect_sent>."
+        "<cause>, <effect>. ",
+        "<cause_sent>. <effect_sent>. ",
+        "<signpl> can be <adj>. ",
+        "Some <signpl> are more <adj> than others. ",
+        "<signpl> are rarely <adj>. ",
+        "Most <signpl> tend to be <adj>. "
     ],
     "matches":
     [

@@ -2,33 +2,33 @@
     "cause":
     [
         "As a <asp> sign",
-        "Because <pr> <is> <adj>",
+        "Because they are <adj>",
         "Since <signpl> tend to be <adj>"
     ],
     "effect":
     [
         "<signpl> are <adj>",
         "<signpl> tend to be <adj>",
-        "<pr> <is> <adj>."
+        "they are <adj>"
     ],
     "cause_sent":
     [
-        "<sign> is a <asp> sign, which makes them <adj>.",
-        "<signpl> are based in <asp>."
+        "<sign> is a <asp> sign, which makes them <adj>",
+        "<signpl> are based in <asp>"
     ],
     "effect_sent":
     [
-        "This can also make them more <adj>.",
-        "This prevents them from being <adj>.",
-        "This causes <signpl> to be <adj>.",
-        "As a result <signpl> can have trouble being <adj>.",
-        "As a result they tend to be more <adj>."
+        "This can also make them more <adj>",
+        "This prevents them from being <adj>",
+        "This causes <signpl> to be <adj>",
+        "As a result <signpl> can have trouble being <adj>",
+        "As a result they tend to be more <adj>"
     ],
     "sent":
     [
-        "<signpl> can be <adj>.",
-        "Some <signpl> are more <adj> than others.",
-        "<signpl> are rarely <adj>.",
+        "<signpl> can be <adj>",
+        "Some <signpl> are more <adj> than others",
+        "<signpl> are rarely <adj>",
         "Most <signpl> tend to be <adj>"
     ]
 }

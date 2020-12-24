@@ -5,17 +5,26 @@
 * <asp> = sign aspect
 * <adj> = adjective
 */
-var fragments, structures, signs, aspects, types;
+var fragments, structures, signs, adjectives, aspects, types;
 
-function httpGet(theUrl, callback)
+function httpGet(path, callback)
 {
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    callback(xmlHttp.responseText);
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function(){
+        if(xhr.readyState === XMLHttpRequest.DONE) {
+            if(xhr.status === 200) {
+                callback(xhr.response);
+            }
+            else {
+                console.log("error");
+            }
+        }
+    };
+    xhr.open("GET", path, true);
+    xhr.send();
 }
 
-loadSentenceData()
+function loadSentenceData()
 {
     httpGet("json/sentence_fragments.json", function(response){
         try {
@@ -37,9 +46,9 @@ loadSentenceData()
         }
     });
 
-    httpGet("json/sign_aspects.json", function(response){
+    httpGet("json/sign_adjectives.json", function(response){
         try {
-            aspects = JSON.parse(response);
+            adjectives = JSON.parse(response)["adjectives"];
         }
         catch(e)
         {
@@ -47,9 +56,11 @@ loadSentenceData()
         }
     });
     
-    httpGet("json/sign_types.json", function(response){
+    httpGet("json/sign_aspects.json", function(response){
         try {
-            types = JSON.parse(response);
+            response = JSON.parse(response);
+            aspects = response["aspect"];
+            types = response["type"];
         }
         catch(e)
         {
@@ -59,7 +70,7 @@ loadSentenceData()
 
     httpGet("json/signs.json", function(response){
         try {
-            signs = JSON.parse(response);
+            signs = JSON.parse(response)["signs"];
         }
         catch(e)
         {
@@ -68,13 +79,54 @@ loadSentenceData()
     });
 }
 
+//Get a random element from an array
+function getRand(arr)
+{
+    return arr[Math.floor(Math.random() * Math.floor(arr.length))];
+}
+
+//Replace all instances of a given tag with a random element from the provided vals array
+function replaceTagRandomly(sentence, tag, vals)
+{
+    //Replace each tag instance
+    while(sentence.includes("<" + tag + ">"))
+        sentence = sentence.replace("<" + tag + ">", getRand(vals));
+    return sentence;
+}
+
 function matchSentence()
 {
 
 }
-function signSentence()
+function signParagraph(sign)
 {
-    
+    let paragraph = "";
+    for(let i = 0; i < 7; i++)
+    {
+        //1 or 2 sentence structure
+        if(i % 2 == 0) paragraph += signSentence(structures["signs"][0], sign);
+        else paragraph += signSentence(structures["signs"][1], sign);
+    }
+    return paragraph;
+}
+function signSentence(sentence, sign)
+{
+    console.log(sentence);
+    //Fill structure with sentence fragments
+    sentence = replaceTagRandomly(sentence, "cause", fragments["cause"]);
+    sentence = replaceTagRandomly(sentence, "cause_sent", fragments["cause_sent"]);
+    sentence = replaceTagRandomly(sentence, "effect", fragments["effect"]);
+    sentence = replaceTagRandomly(sentence, "effect_sent", fragments["effect_sent"]);
+
+    //Fill out sentence
+    sentence = sentence.replace(/<sign>/g, signs[sign]["name"]);
+    sentence = sentence.replace(/<signpl>/g, signs[sign]["plural"]);
+
+    sentence = replaceTagRandomly(sentence, "adj", adjectives);
+    sentence = replaceTagRandomly(sentence, "asp", aspects);
+    sentence = replaceTagRandomly(sentence, "type", types);
+
+    return sentence;
 }
 function horoscopeSentence()
 {
