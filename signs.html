@@ -6,9 +6,15 @@
     <style>
         .container {
             background-color: aliceblue;
-            border: 3px solid blue;
-            width: 90vw;
+            border-top: 3px solid blue;
+            border-bottom: 3px solid blue;
+            width: 100vw;
             height: 85vh;
+            max-width: 100%;
+        }
+        .astro-row {
+            /* max-height: 25%; */
+            /* margin-bottom: 2%; */
         }
         .card-title {
             text-align: center;
@@ -68,28 +74,28 @@
             color: black !important;
         }
         .sign-symbol {
-            width: 70%;
-            height: 70%;
-            margin-left: 15%;
+            width: 50%;
+            height: 50%;
+            margin-left: 25%;
         }
         .Leo-symbol {
-            margin-top: 10%;
-            margin-bottom: -10%;
+            margin-top: 5%;
+            margin-bottom: -5%;
         }
         .Sagittarius-symbol {
-            width: 60%;
-            height: 60%;
-            margin-left: 20%;
+            width: 40%;
+            height: 40%;
+            margin-left: 30%;
             margin-top: 10%;
         }
         .Aquarius-symbol {
-            width: 80%;
-            height: 80%;
-            margin-left: 10%;
+            width: 60%;
+            height: 60%;
+            margin-left: 20%;
             margin-top: -5%;
         }
         .card {
-            max-height: 200px;
+            max-height: 170px;
             overflow: hidden;
         }
     </style>
@@ -106,7 +112,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="horoscopes.html">Horoscopes</a>
@@ -117,7 +123,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="matches.html">Matches</a>
                 </li>
-                <li class="nav-item dropdown">
+                <!-- <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
@@ -128,21 +134,21 @@
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Something else here</a>
                     </div>
-                </li>
-                <li class="nav-item">
+                </li> -->
+                <!-- <li class="nav-item">
                     <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
+                </li> -->
             </ul>
-            <form class="form-inline my-2 my-lg-0">
+            <!-- <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            </form> -->
         </div>
     </nav>
     <!-- Sign Panels -->
     <div class="container">
         <h2 id="title" class="title">Signs</h2>
-        <div class="row">
+        <div class="row astro-row">
             <div class="col-3">
                 <div id="Aries" class="card text-white mb-3" style="max-width: 20rem;">
                     <div class="card-body">
@@ -176,7 +182,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row astro-row">
             <div class="col-3">
                 <div id="Leo" class="card mb-3" style="max-width: 20rem;">
                     <div class="card-body">
@@ -210,7 +216,7 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="row astro-row">
             <div class="col-3">
                 <div id="Sagittarius" class="card text-white mb-3" style="max-width: 20rem;">
                     <div class="card-body">
