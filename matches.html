@@ -153,7 +153,7 @@
             <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                 <div id="score" class="card-body">
                     <h4 class="card-title">Match Score</h4>
-                    <p class="card-text text-white"></p>
+                    <h1 id="score" class="card-text text-white"></h1>
                 </div>
             </div>
         </div>
@@ -324,6 +324,9 @@
         img.className = "sign-symbol card-text";
         img.src = "images/" + signsArr[signId] + "Sym.png";
         getEl("match-" + matchId).appendChild(img);
+
+        //If both matches have been selected calculate their compatibility
+        if(!matches.includes(undefined)) calculateScore();
     }
     //Deselect and remove a sign from one of the match slots
     function deselectSign(matchId)
@@ -332,6 +335,18 @@
         
         matches[matchId] = undefined;
         getEl("match-" + matchId).removeChild(getEl("match-image-" + matchId));
+
+        //Clear score
+        let scoreDom = getEl("score");
+        if(scoreDom.innerHTML != "") scoreDom.innerHTML = "";
+    }
+    //Once all signs have been selected, calculate their compatibility score
+    //This can be a number, maybe add letters and phrases eventually
+    //No input because it's fake
+    function calculateScore()
+    {
+        let score = Math.floor(Math.random() * 101);
+        getEl("score").innerHTML = score + "%";
     }
     function getEl(id) {
         return document.getElementById(id);
