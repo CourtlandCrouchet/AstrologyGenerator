@@ -1,34 +1,62 @@
 {
-    "cause":
-    [
-        "As a <asp> sign",
-        "Because they are <adj>",
-        "Since <signpl> tend to be <adj>"
-    ],
-    "effect":
-    [
-        "<signpl> are <adj>",
-        "<signpl> tend to be <adj>",
-        "they are <adj>"
-    ],
-    "cause_sent":
-    [
-        "<sign> is a <asp> sign, which makes them <adj>",
-        "<signpl> are based in <asp>"
-    ],
-    "effect_sent":
-    [
-        "This can also make them more <adj>",
-        "This prevents them from being <adj>",
-        "This causes <signpl> to be <adj>",
-        "As a result <signpl> can have trouble being <adj>",
-        "As a result they tend to be more <adj>"
-    ],
-    "sent":
-    [
-        "<signpl> can be <adj>",
-        "Some <signpl> are more <adj> than others",
-        "<signpl> are rarely <adj>",
-        "Most <signpl> tend to be <adj>"
-    ]
+    "key":
+    {
+        "<pr>": "pronoun [you, it, they]",
+        "<is>": "to be, conjugate to match pronoun [is, are, can be]",
+        "<asp>": "sign aspect",
+        "<adj>": "adjective",
+        "<adv>": "adverb",
+        "<mverb>": "matches verb, for example: struggle with, like, get along with, hate, love"
+    },
+    "signs":
+    {
+        "cause":
+        [
+            "As a <asp> sign",
+            "Because they are <adj>",
+            "Since <signpl> tend to be <adj>"
+        ],
+        "effect":
+        [
+            "<signpl> are <adj>",
+            "<signpl> tend to be <adj>",
+            "they are <adj>"
+        ],
+        "cause_sent":
+        [
+            "<sign> is a <asp> sign, which makes them <adj>",
+            "<signpl> are based in <asp>"
+        ],
+        "effect_sent":
+        [
+            "This can also make them more <adj>",
+            "This prevents them from being <adj>",
+            "This causes <signpl> to be <adj>",
+            "As a result <signpl> can have trouble being <adj>",
+            "As a result they tend to be more <adj>"
+        ],
+        "sent":
+        [
+            "<signpl> can be <adj>",
+            "Some <signpl> are more <adj> than others",
+            "<signpl> are rarely <adj>",
+            "Most <signpl> tend to be <adj>"
+        ]
+    },
+    "matches":
+    {
+        "cause":
+        [
+            "As a <asp> sign",
+            "Because <signpl> are <adj>",
+            "Since <signpl> tend to be <adj>"
+        ],
+        "effect":
+        [
+            "<signpl> may find them <adj>",
+            "they can seem <adj> to <signpl>",
+            "they <mverb> <adv> with <signpl>",
+            "they <mverb> <adv> with <signpl>, who tend to be <adj>"
+        ]
+    }
 }

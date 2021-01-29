@@ -14,6 +14,7 @@
     ],
     "matches":
     [
-
+        "<cause>, <effect>. ",
+        "<cause_sent>. <effect_sent>. "
     ]
 }

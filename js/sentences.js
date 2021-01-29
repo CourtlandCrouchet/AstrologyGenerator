@@ -4,6 +4,8 @@
 * <is> = to be, conjugate to match pronoun [is, are, can be]
 * <asp> = sign aspect
 * <adj> = adjective
+* <adv> = adverb
+* <mverb> = matches verb
 */
 var fragments, structures, signs, adjectives, aspects, types;
 
@@ -113,10 +115,10 @@ function signSentence(sentence, sign)
 {
     console.log(sentence);
     //Fill structure with sentence fragments
-    sentence = replaceTagRandomly(sentence, "cause", fragments["cause"]);
-    sentence = replaceTagRandomly(sentence, "cause_sent", fragments["cause_sent"]);
-    sentence = replaceTagRandomly(sentence, "effect", fragments["effect"]);
-    sentence = replaceTagRandomly(sentence, "effect_sent", fragments["effect_sent"]);
+    sentence = replaceTagRandomly(sentence, "cause", fragments["signs"]["cause"]);
+    sentence = replaceTagRandomly(sentence, "cause_sent", fragments["signs"]["cause_sent"]);
+    sentence = replaceTagRandomly(sentence, "effect", fragments["signs"]["effect"]);
+    sentence = replaceTagRandomly(sentence, "effect_sent", fragments["signs"]["effect_sent"]);
 
     //Fill out sentence
     sentence = sentence.replace(/<sign>/g, signs[sign]["name"]);
