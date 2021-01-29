@@ -141,23 +141,27 @@
     </nav>
     <h2 id="title" class="title">Matches</h2>
     <div class="row">
-        <div class="col-6">
+        <div class="col-4">
             <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                <div id="match-1" class="card-body">
+                <div id="match-0" class="card-body">
                     <h4 class="card-title">Match 1</h4>
-                    <p class="card-text text-white">Some quick example text to build on the panel title and make up
-                        the bulk
-                        of the panel's content.</p>
+                    <p class="card-text text-white"></p>
                 </div>
             </div>
         </div>
-        <div class="col-6">
+        <div class="col-4">
             <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                <div id="match-2" class="card-body">
+                <div id="score" class="card-body">
+                    <h4 class="card-title">Match Score</h4>
+                    <p class="card-text text-white"></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+                <div id="match-1" class="card-body">
                     <h4 class="card-title">Match 2</h4>
-                    <p class="card-text text-white">Some quick example text to build on the panel title and make up
-                        the bulk
-                        of the panel's content.</p>
+                    <p class="card-text text-white"></p>
                 </div>
             </div>
         </div>
@@ -268,8 +272,69 @@
     </div>
 </body>
 <script>
+    var matches = [undefined, undefined];
+    var signsArr = [
+        "Aries",
+        "Taurus",
+        "Gemini",
+        "Cancer",
+        "Leo",
+        "Virgo",
+        "Libra",
+        "Scorpio",
+        "Sagittarius",
+        "Capricorn",
+        "Aquarius",
+        "Pisces"
+    ]
     function init() {
+        //Enable selection of signs
+        for(let i = 0; i < signsArr.length; i++)
+        {
+            getEl(signsArr[i]).onclick = function(){
+                selectSign(i);
+            }
+        }
+        //Enable deselection of signs
+        for(let i = 0; i < matches.length; i++)
+        {
+            getEl("match-" + i).onclick = function(){
+                deselectSign(i);
+            }
+        }
+    }
+    //Select and display a sign in one of the match slots
+    function selectSign(signId)
+    {
+        let matchId;
+        //Check that there is an empty slot
+        for(let i = 0; i < matches.length; i++)
+        {
+            if(matches[i] === undefined) {
+                matchId = i;
+                matches[i] = i;
+                break;
+            }
+        }
+        if(matchId === undefined) return;
 
+        //Draw sign symbol in match slot
+        let img = document.createElement("img");
+        img.id = "match-image-" + matchId;
+        img.className = "sign-symbol card-text";
+        img.src = "images/" + signsArr[signId] + "Sym.png";
+        getEl("match-" + matchId).appendChild(img);
+    }
+    //Deselect and remove a sign from one of the match slots
+    function deselectSign(matchId)
+    {
+        if(matches[matchId] === undefined) return;
+        
+        matches[matchId] = undefined;
+        getEl("match-" + matchId).removeChild(getEl("match-image-" + matchId));
+    }
+    function getEl(id) {
+        return document.getElementById(id);
     }
     init();
 </script>
