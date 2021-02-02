@@ -106,19 +106,19 @@ function replaceTagRandomly(sentence, tag, vals)
     return sentence;
 }
 
-function matchParagrah(signs)
+function matchParagrah(matches)
 {
     let paragraph = "";
     for(let i = 0; i < 7; i++)
     {
         //1 or 2 sentence structure
-        if(i % 2 == 0) paragraph += signSentence(structures["matches"][0], sign);
-        else paragraph += signSentence(structures["matches"][1], sign);
+        if(i % 2 == 0) paragraph += matchSentence(structures["matches"][0], matches);
+        else paragraph += matchSentence(structures["matches"][1], matches);
     }
     return paragraph;
 }
 
-function matchSentence()
+function matchSentence(sentence, matches)
 {
     console.log(sentence);
     //Fill structure with sentence fragments
@@ -128,8 +128,7 @@ function matchSentence()
     sentence = replaceTagRandomly(sentence, "effect_sent", fragments["matches"]["effect_sent"]);
 
     //Fill out sentence
-    sentence = sentence.replace(/<sign>/g, signs[sign]["name"]);
-    sentence = sentence.replace(/<signpl>/g, signs[sign]["plural"]);
+    sentence = matchSigns(sentence, matches);
 
     sentence = replaceTagRandomly(sentence, "adj", adjectives);
     sentence = replaceTagRandomly(sentence, "adv", adverbs);
@@ -139,6 +138,29 @@ function matchSentence()
 
     return sentence;
 }
+
+//Replace all sign tags in a sentence from the provided list of matches (sign) alternating
+function matchSigns(sentence, matches)
+{
+    //Start at a random sign
+    let sign = Math.floor(Math.random() * matches.length);
+    //Number each <sign> and <signpl> tag to track where each sign goes
+    while(sentence.includes("<sign>" || "<signpl>"))
+    {
+        sentence = sentence.replace(/<sign|<signpl/, $& + sign);
+        if(++sign >= matches.length) sign = 0;
+    }
+    //Replace each <sign> and <signpl> with one of the matches, alternating
+    for(let i = 0; i < matches.length; i++)
+    {
+        let re = new RegExp("<sign" + i + ">", "g");
+        sentence = sentence.replace(re, signs[matches[i]]["name"]);
+        re = new RegExp("<signpl" + i + ">", "g");
+        sentence = sentence.replace(re, signs[matches[i]]["plural"]);
+    }
+    return sentence;
+}
+
 function signParagraph(sign)
 {
     let paragraph = "";
