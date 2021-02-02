@@ -7,7 +7,7 @@
 * <adv> = adverb
 * <mverb> = matches verb
 */
-var fragments, structures, signs, adjectives, aspects, types;
+var fragments, structures, signs, adjectives, aspects, types, mverbs;
 
 function httpGet(path, callback)
 {
@@ -79,6 +79,16 @@ function loadSentenceData()
             console.log(e);
         }
     });
+
+    httpGet("json/verbs.json", function(response){
+        try {
+            mverbs = JSON.parse(response)["mverbs"];
+        }
+        catch(e)
+        {
+            console.log(e);
+        }
+    });
 }
 
 //Get a random element from an array
@@ -96,9 +106,38 @@ function replaceTagRandomly(sentence, tag, vals)
     return sentence;
 }
 
+function matchParagrah(signs)
+{
+    let paragraph = "";
+    for(let i = 0; i < 7; i++)
+    {
+        //1 or 2 sentence structure
+        if(i % 2 == 0) paragraph += signSentence(structures["matches"][0], sign);
+        else paragraph += signSentence(structures["matches"][1], sign);
+    }
+    return paragraph;
+}
+
 function matchSentence()
 {
+    console.log(sentence);
+    //Fill structure with sentence fragments
+    sentence = replaceTagRandomly(sentence, "cause", fragments["matches"]["cause"]);
+    sentence = replaceTagRandomly(sentence, "cause_sent", fragments["matches"]["cause_sent"]);
+    sentence = replaceTagRandomly(sentence, "effect", fragments["matches"]["effect"]);
+    sentence = replaceTagRandomly(sentence, "effect_sent", fragments["matches"]["effect_sent"]);
 
+    //Fill out sentence
+    sentence = sentence.replace(/<sign>/g, signs[sign]["name"]);
+    sentence = sentence.replace(/<signpl>/g, signs[sign]["plural"]);
+
+    sentence = replaceTagRandomly(sentence, "adj", adjectives);
+    sentence = replaceTagRandomly(sentence, "adv", adverbs);
+    sentence = replaceTagRandomly(sentence, "mverb", verbs["mverbs"]);
+    sentence = replaceTagRandomly(sentence, "asp", aspects);
+    sentence = replaceTagRandomly(sentence, "type", types);
+
+    return sentence;
 }
 function signParagraph(sign)
 {

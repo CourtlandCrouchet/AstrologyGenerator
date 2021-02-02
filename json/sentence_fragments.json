@@ -55,8 +55,8 @@
         [
             "<signpl> may find them <adj>",
             "they can seem <adj> to <signpl>",
-            "they <mverb> <adv> with <signpl>",
-            "they <mverb> <adv> with <signpl>, who tend to be <adj>"
+            "they <adv> <mverb> with <signpl>",
+            "they <adv> <mverb> with <signpl>, who tend to be <adj>"
         ]
     }
 }
