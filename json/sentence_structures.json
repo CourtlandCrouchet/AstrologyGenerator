@@ -1,16 +1,17 @@
 {
     "horoscopes":
     [
-
+        "<cause>, <effect>. ",
+        "<cause_sent>. <effect_sent>. "
     ],
     "signs":
     [
         "<cause>, <effect>. ",
         "<cause_sent>. <effect_sent>. ",
         "<signpl> can be <adj>. ",
-        "Some <signpl> are more <adj> than others. ",
         "<signpl> are rarely <adj>. ",
-        "Most <signpl> tend to be <adj>. "
+        "Most <signpl> tend to be <adj>. ",
+        "Some <signpl> are more <adj> than others. "
     ],
     "matches":
     [

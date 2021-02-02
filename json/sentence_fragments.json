@@ -1,12 +1,12 @@
 {
     "key":
     {
-        "<pr>": "pronoun [you, it, they]",
-        "<is>": "to be, conjugate to match pronoun [is, are, can be]",
-        "<asp>": "sign aspect",
         "<adj>": "adjective",
         "<adv>": "adverb",
-        "<mverb>": "matches verb, for example: struggle with, like, get along with, hate, love"
+        "<asp>": "sign aspect",
+        "<is>": "to be, conjugate to match pronoun [is, are, can be]",
+        "<mverb>": "matches verb, for example: struggle with, like, get along with, hate, love",
+        "<pr>": "pronoun [you, it, they]"
     },
     "signs":
     {
@@ -29,18 +29,18 @@
         ],
         "effect_sent":
         [
-            "This can also make them more <adj>",
-            "This prevents them from being <adj>",
-            "This causes <signpl> to be <adj>",
             "As a result <signpl> can have trouble being <adj>",
-            "As a result they tend to be more <adj>"
+            "As a result they tend to be more <adj>",
+            "This can also make them more <adj>",
+            "This causes <signpl> to be <adj>",
+            "This prevents them from being <adj>"
         ],
         "sent":
         [
             "<signpl> can be <adj>",
-            "Some <signpl> are more <adj> than others",
             "<signpl> are rarely <adj>",
-            "Most <signpl> tend to be <adj>"
+            "Most <signpl> tend to be <adj>",
+            "Some <signpl> are more <adj> than others"
         ]
     },
     "matches":
@@ -54,9 +54,9 @@
         "effect":
         [
             "<signpl> may find them <adj>",
-            "they can seem <adj> to <signpl>",
             "they <adv> <mverb> with <signpl>",
-            "they <adv> <mverb> with <signpl>, who tend to be <adj>"
+            "they <adv> <mverb> with <signpl>, who tend to be <adj>",
+            "they can seem <adj> to <signpl>"
         ]
     }
 }

@@ -1,21 +1,21 @@
 {
     "adverbs":
     [
+        "arrogantly",
+        "awkwardly",
+        "commonly",
         "easily",
-        "quickly",
-        "naturally",
-        "unbearably",
         "especially",
-        "hopelessly",
-        "urgently",
         "fully",
-        "ultimately",
+        "hopelessly",
+        "naturally",
         "never",
+        "often",
+        "quickly",
         "seemingly",
         "seldom",
-        "often",
-        "awkwardly",
-        "arrogantly",
-        "commonly"
+        "ultimately",
+        "unbearably",
+        "urgently"
     ]
 }

@@ -1,12 +1,12 @@
 {
     "aspect":
     [
-        "Water",
         "Earth",
-        "Fire",
-        "Wind",
-        "Metal",
         "Ether",
+        "Fire",
+        "Metal",
+        "Water",
+        "Wind",
         "Wood"
     ],
     "type":
