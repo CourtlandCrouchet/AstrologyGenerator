@@ -7,7 +7,7 @@
 * <adv> = adverb
 * <mverb> = matches verb
 */
-var fragments, structures, signs, adjectives, aspects, types, mverbs;
+var fragments, structures, signs, adjectives, aspects, types, verbs;
 
 function httpGet(path, callback)
 {
@@ -82,7 +82,17 @@ function loadSentenceData()
 
     httpGet("json/verbs.json", function(response){
         try {
-            mverbs = JSON.parse(response)["mverbs"];
+            verbs = JSON.parse(response);
+        }
+        catch(e)
+        {
+            console.log(e);
+        }
+    });
+
+    httpGet("json/adverbs.json", function(response){
+        try {
+            adverbs = JSON.parse(response)["adverbs"];
         }
         catch(e)
         {
@@ -106,14 +116,15 @@ function replaceTagRandomly(sentence, tag, vals)
     return sentence;
 }
 
-function matchParagrah(matches)
+function matchParagraph(matches)
 {
     let paragraph = "";
     for(let i = 0; i < 7; i++)
     {
         //1 or 2 sentence structure
-        if(i % 2 == 0) paragraph += matchSentence(structures["matches"][0], matches);
-        else paragraph += matchSentence(structures["matches"][1], matches);
+        // if(i % 2 == 0) paragraph += matchSentence(structures["matches"][0], matches);
+        // else paragraph += matchSentence(structures["matches"][1], matches);
+        paragraph += matchSentence(structures["matches"][0], matches);
     }
     return paragraph;
 }
@@ -145,9 +156,9 @@ function matchSigns(sentence, matches)
     //Start at a random sign
     let sign = Math.floor(Math.random() * matches.length);
     //Number each <sign> and <signpl> tag to track where each sign goes
-    while(sentence.includes("<sign>" || "<signpl>"))
+    while(sentence.includes("<sign>") || sentence.includes("<signpl>"))
     {
-        sentence = sentence.replace(/<sign|<signpl/, $& + sign);
+        sentence = sentence.replace(/<sign(?=>)|<signpl(?=>)/, "$&" + sign);
         if(++sign >= matches.length) sign = 0;
     }
     //Replace each <sign> and <signpl> with one of the matches, alternating

@@ -49,13 +49,14 @@
         [
             "As a <asp> sign",
             "Because <signpl> are <adj>",
-            "Since <signpl> tend to be <adj>"
+            "Since <signpl> tend to be <adj>",
+            "Due to the <adj> nature of <signpl>"
         ],
         "effect":
         [
             "<signpl> may find them <adj>",
-            "they <adv> <mverb> with <signpl>",
-            "they <adv> <mverb> with <signpl>, who tend to be <adj>",
+            "they <mverb> <adv> <signpl>",
+            "they <mverb> <adv> <signpl>, who tend to be <adj>",
             "they can seem <adj> to <signpl>"
         ]
     }

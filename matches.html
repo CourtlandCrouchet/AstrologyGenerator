@@ -160,6 +160,7 @@
                     <h1 id="score" class="card-text text-white"></h1>
                 </div>
             </div>
+            <div id="score-text" class="card text-white bg-primary mb-3" style="display: none"></div>
         </div>
         <div class="col-4">
             <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
@@ -275,6 +276,7 @@
         </div>
     </div>
 </body>
+<script src="js/sentences.js"></script>
 <script>
     var matches = [undefined, undefined];
     var signsArr = [
@@ -330,7 +332,10 @@
         getEl("match-" + matchId).appendChild(img);
 
         //If both matches have been selected calculate their compatibility
-        if(!matches.includes(undefined)) calculateScore();
+        if(!matches.includes(undefined)) {
+            calculateScore();
+            writeSummary();
+        }
     }
     //Deselect and remove a sign from one of the match slots
     function deselectSign(matchId)
@@ -343,6 +348,10 @@
         //Clear score
         let scoreDom = getEl("score");
         if(scoreDom.innerHTML != "") scoreDom.innerHTML = "";
+        
+        //Clear match summary
+        let summaryDom = getEl("score-text");
+        summaryDom.style.display = "none";
     }
     //Once all signs have been selected, calculate their compatibility score
     //This can be a number, maybe add letters and phrases eventually
@@ -352,6 +361,14 @@
         let score = Math.floor(Math.random() * 101);
         getEl("score").innerHTML = score + "%";
     }
+
+    //Write a summary of the match score
+    function writeSummary()
+    {
+        getEl("score-text").innerHTML = matchParagraph(matches);
+        getEl("score-text").style.display = "block";
+    }
+
     function getEl(id) {
         return document.getElementById(id);
     }
